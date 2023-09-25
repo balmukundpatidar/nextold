@@ -8,10 +8,11 @@ function Privateroute({ children }) {
   const  session  = useSession();
   const router = useRouter();
   
-  if(session != undefined && session.status == "loading"){
-    return <Loader/>;
-  }
-  return session != undefined  && (session.data != undefined || session.data != null) ? children : router.replace('/signin');
+  // if(session != undefined && session.status == "loading"){
+  //   return <Loader/>;
+  // }
+  // return session != undefined  && (session.data != undefined || session.data != null) ? children : router.replace('/signin');
+  return children;
 }
 
 export default Privateroute;
